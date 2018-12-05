@@ -1,4 +1,4 @@
-#include "边的权值的更改函数.h"
+#include "bianquangai.h"
 void bian(int pre[], int tu[][num], int index[]) {
 	int i = 0, j = 0, v = 0;
 	cout << "请输入要更改边的为R";
