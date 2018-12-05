@@ -9,4 +9,5 @@ void bian(int pre[], int tu[][num], int index[]) {
 	cin >> v;
 	tu[i][j] = v;
 	tu[j][i] = v;
+	cout << "Ìïº£Ñó";
 }
