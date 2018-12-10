@@ -1,5 +1,6 @@
 #include"jiedian.h"
-void jiedian(int pre[], int tu[][num], int index[]) {
+int jiedian(int pre[], int tu[][num], int index[]) 
+{
 	int mm = 0;
 	cout << "选择功能（1.删除节点  2.增加节点）：";
 	cin >> mm;
@@ -13,33 +14,25 @@ void jiedian(int pre[], int tu[][num], int index[]) {
 		}
 	}
 	else {
-		int sum = 0;
+		int sum = 0, dd = 0, ee = 0;
+		cout << "输入增加节点的代号：";
+		cin >> sum;
+		if (sum >= num || sum < 0) {
+			cout << "输入有误，重新输入：";
+			cin >> sum;
+		}
 		for (int cc = 0; cc < num; cc++) {
-			for (int dd = 0; dd < num; dd++) {
-				if (tu[cc][dd] == maxnum) {
-					sum++;
-				}
-				else {
-					sum = 0;
-					break;
-				}
-				if (sum == num) {
-					cout << "新增节点代号：" << cc << endl;
-					//cout<<"请输入与新增节点相连边的权值：";
-					int ee = 0, ff = 0;
-					for (int g = 0; g < num; g++) {
-						cout << "与新边相连的节点：";
-						cin >> ee;
-						if (ee < num&&ee >= 0) {
-							cout << "   权值：";
-							cin >> ff;
-							tu[cc][ee] = ff;
-							tu[ee][cc] = ff;
-						}
-						else { break; }
-					}
-				}
+			cout << "请输入与新编相连的节点代号：";
+			cin >> dd;
+			if (dd > num) { return 0; }
+			else {
+				cout << "请输入新的权值：";
+				cin >> ee;
+				tu[sum][dd] = ee;
+				tu[dd][sum] = ee;
 			}
 		}
 	}
+	
 }
+

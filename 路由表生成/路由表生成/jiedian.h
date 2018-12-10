@@ -1,5 +1,5 @@
 #include<iostream>
 #define maxnum 10000
-#define num 11
+#define num 15
 using namespace std;
-void jiedian(int pre[], int tu[][num], int index[]);//增删节点
+int jiedian(int pre[], int tu[][num], int index[]);//增删节点
