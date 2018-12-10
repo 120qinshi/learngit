@@ -12,7 +12,7 @@ void output(int pre[], int tu[][num], int index[], int p) {
 				}
 				cout << "下一跳：" << prenum << endl;
 			}
-			else { cout << "直接交付" << endl; }
+			else { cout << "下一跳："<<e <<endl;}
 		}
 	}
 
